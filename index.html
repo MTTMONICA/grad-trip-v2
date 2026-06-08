@@ -55,6 +55,27 @@ td{background:#fff}
 .ticket-pic{width:100%;max-width:180px;border-radius:8px;margin:10px 0;display:block;box-shadow:0 2px 8px rgba(0,0,0,0.15);cursor:zoom-in}
 .ticket-row{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
 .ticket-row .t-info-col{flex:1;min-width:280px}
+
+/* 出发提醒条 */
+.departure-alert{background:linear-gradient(135deg,#e74c3c,#c0392b);color:#fff;padding:18px 22px;border-radius:10px;margin:15px 0;display:flex;align-items:center;gap:15px;box-shadow:0 4px 15px rgba(231,76,60,0.35);animation:pulse 2s infinite}
+.departure-alert.train{background:linear-gradient(135deg,#2980b9,#1a5276)}
+.departure-alert.flight{background:linear-gradient(135deg,#e67e22,#d35400)}
+@keyframes pulse{0%,100%{box-shadow:0 4px 15px rgba(231,76,60,0.35)}50%{box-shadow:0 4px 30px rgba(231,76,60,0.6)}}
+.departure-alert .alert-icon{font-size:42px;flex-shrink:0;animation:bounce 1s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.departure-alert .alert-body{flex:1}
+.departure-alert .alert-title{font-size:18px;font-weight:bold;margin-bottom:2px}
+.departure-alert .alert-detail{font-size:14px;opacity:0.95}
+.departure-alert .alert-time{font-size:36px;font-weight:bold;flex-shrink:0;text-align:center;min-width:100px;letter-spacing:2px}
+.departure-alert .alert-time small{display:block;font-size:12px;opacity:0.8;font-weight:normal}
+/* 交通信息卡 */
+.transit-card{background:linear-gradient(135deg,#1a1a2e,#2c3e50);color:#fff;border-radius:12px;padding:20px;margin:12px 0;display:flex;align-items:center;gap:18px;box-shadow:0 3px 12px rgba(0,0,0,0.2)}
+.transit-card .tc-icon{font-size:40px;flex-shrink:0}
+.transit-card .tc-body{flex:1}
+.transit-card .tc-route{font-size:18px;font-weight:bold;color:#ffa500}
+.transit-card .tc-info{font-size:14px;color:#ccc;margin-top:4px}
+.transit-card .tc-time-big{font-size:28px;font-weight:bold;color:#4dff4d;text-align:center;min-width:100px}
+.transit-card .tc-time-big small{display:block;font-size:12px;color:#aaa;font-weight:normal}
 @media(max-width:768px){
   body{padding:10px}
   .day{padding:15px}
@@ -116,6 +137,15 @@ td{background:#fff}
 
 <div class="buffer">到厦门北站跟着人流出站就行。不用急，下一段打车去机场也就半小时的事。</div>
 
+	<div class="departure-alert train">
+	<div class="alert-icon">🚄</div>
+	<div class="alert-body">
+	<div class="alert-title">准备出发！07:20出门，30分钟后到龙岩站</div>
+	<div class="alert-detail">D3297 动车 · 龙岩→厦门北 · 08:29发车 · 提前收拾好行李，现在检查一下证件和车票</div>
+	</div>
+	<div class="alert-time">08:29<small>龙岩→厦门北</small></div>
+	</div>
+
 <div class="transit">
 <div class="t-icon">🚕</div>
 <div class="t-info"><div class="t-route">厦门北站 → 高崎机场T4</div><div class="t-detail">打车/网约车 | 约30分钟 | 40块左右</div></div>
@@ -123,6 +153,15 @@ td{background:#fff}
 </div>
 
 <div class="buffer">10:20到机场，12:10的飞机，差不多<b>两个小时</b>用来值机托运安检，绰绰有余。过了安检在候机厅给小孩买点零食和水，飞机上吃。</div>
+
+	<div class="departure-alert flight">
+	<div class="alert-icon">✈️</div>
+	<div class="alert-body">
+	<div class="alert-title">值机提醒！3U8924 两小时后起飞</div>
+	<div class="alert-detail">川航 · 厦门高崎→成都双流 · 12:10→15:05 · 现在去值机柜台托运行李，充电宝别放行李箱</div>
+	</div>
+	<div class="alert-time">12:10<small>厦门→成都</small></div>
+	</div>
 
 <div class="ticket-row">
 		<div class="t-info-col">
@@ -197,6 +236,15 @@ td{background:#fff}
 <div class="row"><div class="time">12:00</div><div class="event">🍽️ 午饭。酒店附近找个川菜馆，回锅肉、麻婆豆腐、水煮鱼，人均五六十。不用特意跑远</div></div>
 </div>
 
+<div class="departure-alert train">
+<div class="alert-icon">🚄</div>
+<div class="alert-body">
+<div class="alert-title">准备出发！C3358 动车一小时后发车</div>
+<div class="alert-detail">成都南→雅安 · 14:21发车 · 现在该收拾东西出发了，地铁半小时到成都南站</div>
+</div>
+<div class="alert-time">14:21<small>成都南→雅安</small></div>
+</div>
+
 <div class="transit">
 <div class="t-icon">🚇</div>
 <div class="t-info"><div class="t-route">春熙路 → 成都南站</div><div class="t-detail">地铁2号线转1号线 | 半小时</div></div>
@@ -256,6 +304,15 @@ td{background:#fff}
 
 	<div class="buffer">✅ 午饭吃完回酒店拿行李、退房。下午直接从<b>雅安站</b>坐动车到<b>重庆北站</b>，不用再绕成都中转，省了至少2个小时。</div>
 
+	<div class="departure-alert train">
+	<div class="alert-icon">🚄</div>
+	<div class="alert-body">
+	<div class="alert-title">准备出发！雅安→重庆北 动车一个多小时后发车</div>
+	<div class="alert-detail">从川农打车去雅安站只要15分钟 · 15:51发车 · 直达重庆北，不用换乘！</div>
+	</div>
+	<div class="alert-time">15:51<small>雅安→重庆北</small></div>
+	</div>
+
 	<div class="transit">
 	<div class="t-icon">🚕</div>
 	<div class="t-info"><div class="t-route">川农 → 雅安站</div><div class="t-detail">打车 | 15分钟 | 15块</div></div>
@@ -266,10 +323,13 @@ td{background:#fff}
 
 	<div class="ticket-row">
 		<div class="t-info-col">
-		<div class="transit">
-		<div class="t-icon">🚄</div>
-		<div class="t-info"><div class="t-route">雅安 → 重庆北</div><div class="t-detail">动车 | 已购票 | 15:51→18:12 | 约2小时20分</div></div>
-		<div class="t-time">2小时21分</div>
+		<div class="transit-card">
+		<div class="tc-icon">🚄</div>
+		<div class="tc-body">
+		<div class="tc-route">雅安 → 重庆北</div>
+		<div class="tc-info">动车 | 已购票 | 直达无需换乘</div>
+		</div>
+		<div class="tc-time-big">15:51<small>→ 18:12</small></div>
 		</div>
 		</div>
 		<img class="ticket-pic" src="images/train-yaan-chongqing.png" alt="雅安→重庆北 动车票" onclick="this.style.transform=this.style.transform?'':'scale(1.8)';this.style.cursor='zoom-out'">
@@ -335,6 +395,15 @@ td{background:#fff}
 <div class="row"><div class="time">04:30</div><div class="event">⏰ 起。退房。昨晚打包好的行李直接拎走。前台如果有打包早餐的服务就带上，没有就机场买</div></div>
 </div>
 
+<div class="departure-alert flight">
+<div class="alert-icon">✈️</div>
+<div class="alert-body">
+<div class="alert-title">早班机提醒！3U8829 一个半小时后起飞</div>
+<div class="alert-detail">川航 · 重庆→北京 · 07:10→09:40 · 住机场旁边就是方便，十分钟到航站楼</div>
+</div>
+<div class="alert-time">07:10<small>重庆→北京</small></div>
+</div>
+
 <div class="transit">
 <div class="t-icon">🚕</div>
 <div class="t-info"><div class="t-route">机场酒店 → 江北机场T2</div><div class="t-detail">打车或酒店班车 | 10-15分钟<br>住机场旁边，不用赶，十分钟就到</div></div>
@@ -343,11 +412,14 @@ td{background:#fff}
 
 <div class="buffer">5:30到机场，7:10的飞机，一个半小时值机托运安检。早上人少，不用排队，时间够。</div>
 
-<div class="transit">
-<div class="t-icon">✈️</div>
-<div class="t-info"><div class="t-route">重庆江北 → 北京首都</div><div class="t-detail">3U8829 川航 | 已购票 | 07:10→09:40</div></div>
-<div class="t-time">2.5小时</div>
-</div>
+<div class="transit-card">
+	<div class="tc-icon">✈️</div>
+	<div class="tc-body">
+	<div class="tc-route">重庆江北 → 北京首都</div>
+	<div class="tc-info">3U8829 川航 | 已购票 | 2.5小时</div>
+	</div>
+	<div class="tc-time-big">07:10<small>→ 09:40</small></div>
+	</div>
 
 <div class="transit">
 <div class="t-icon">🚇</div>
