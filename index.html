@@ -19,12 +19,12 @@ body{background:#f5f0e8;color:#333;font:15px "Microsoft YaHei","PingFang SC",san
 .timeline .row{display:flex;padding:8px 0;border-bottom:1px dashed #dee2e6}
 .timeline .time{width:95px;font-weight:bold;color:#1a5276;flex-shrink:0}
 .timeline .event{flex:1}
-.transit{background:#1a1a2e !important;color:#ccc !important;padding:12px 18px;border-radius:8px;margin:10px 0;font-family:Consolas,"Microsoft YaHei",monospace;font-size:14px;display:flex;align-items:center;gap:15px;flex-wrap:wrap}
-.transit .t-icon{font-size:28px;flex-shrink:0;width:40px;text-align:center}
-.transit .t-info{flex:1;line-height:1.8}
-.transit .t-route{color:#ffa500 !important;font-weight:bold;font-size:15px}
-.transit .t-detail{color:#00bcd4 !important}
-.transit .t-time{color:#4dff4d !important;font-size:13px}
+.transit{background:#1a1a2e !important;color:#ccc !important;padding:14px 20px;border-radius:10px;margin:10px 0;font-family:Consolas,"Microsoft YaHei",monospace;font-size:14px;display:flex;align-items:flex-start;gap:15px}
+.transit .t-icon{font-size:30px;flex-shrink:0;width:40px;text-align:center;padding-top:2px}
+.transit .t-body{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px}
+.transit .t-route{color:#ffa500 !important;font-weight:bold;font-size:16px}
+.transit .t-detail{color:#00bcd4 !important;font-size:13px}
+.transit .t-time{color:#4dff4d !important;font-size:18px;font-weight:bold;text-align:center;letter-spacing:1px}
 .tip{background:#fff3cd;border:1px solid #ffc107;border-radius:8px;padding:12px;margin:10px 0;font-size:13px}
 .tip::before{content:"tips ";font-weight:bold;color:#e67e22}
 .note{background:#ffe0e0;border-left:4px solid #e74c3c;padding:15px;border-radius:0 8px 8px 0;margin:15px 0}
@@ -129,16 +129,22 @@ td{background:#fff}
 
 <div class="transit">
 <div class="t-icon">🏠</div>
-<div class="t-info"><div class="t-route">家 → 龙岩站</div><div class="t-detail">打车或家人送 | 20分钟</div></div>
-<div class="t-time">07:20出门<br>07:40到</div>
+<div class="t-body">
+<div class="t-route">家 → 龙岩站</div>
+<div class="t-detail">打车或家人送 | 20分钟</div>
+<div class="t-time">07:20 出发 → 07:40 到达</div>
+</div>
 </div>
 
 <div class="ticket-row">
 		<div class="t-info-col">
 		<div class="transit">
 <div class="t-icon">🚄</div>
-<div class="t-info"><div class="t-route">龙岩站 → 厦门北站</div><div class="t-detail">D3297 动车 | 已购票 | 08:29→09:46</div></div>
-<div class="t-time">1小时17分</div>
+<div class="t-body">
+<div class="t-route">龙岩站 → 厦门北站</div>
+<div class="t-detail">D3297 动车 | 已购票 | 08:29→09:46</div>
+<div class="t-time">08:29 出发 → 09:46 到达</div>
+</div>
 </div>
 		</div>
 		<img class="ticket-pic" src="images/ticket-d3297.png" alt="D3297 龙岩→厦门北 车票" onclick="this.style.transform=this.style.transform?'':'scale(1.8)';this.style.cursor='zoom-out'">
@@ -147,9 +153,12 @@ td{background:#fff}
 <div class="buffer">到厦门北站跟着人流出站就行。不用急，下一段打车去机场也就半小时的事。</div>
 
 	<div class="transit">
-	<div class="t-icon">🚕</div>
-	<div class="t-info"><div class="t-route">厦门北站 → 高崎机场T4</div><div class="t-detail">打车/网约车 | 约30分钟 | 40块左右</div></div>
-<div class="t-time">09:50走<br>10:20到</div>
+<div class="t-icon">🚕</div>
+<div class="t-body">
+<div class="t-route">厦门北站 → 高崎机场T4</div>
+<div class="t-detail">打车/网约车 | 约30分钟 | 40块左右</div>
+<div class="t-time">09:50 出发 → 10:20 到达</div>
+</div>
 </div>
 
 <div class="buffer">10:20到机场，12:10的飞机，差不多<b>两个小时</b>用来值机托运安检，绰绰有余。过了安检在候机厅给小孩买点零食和水，飞机上吃。</div>
@@ -167,8 +176,11 @@ td{background:#fff}
 		<div class="t-info-col">
 		<div class="transit">
 <div class="t-icon">✈️</div>
-<div class="t-info"><div class="t-route">厦门高崎 → 成都双流</div><div class="t-detail">3U8924 川航 | 已购票 | 12:10→15:05</div></div>
-<div class="t-time">约3小时</div>
+<div class="t-body">
+<div class="t-route">厦门高崎 → 成都双流</div>
+<div class="t-detail">3U8924 川航 | 已购票 | 12:10→15:05</div>
+<div class="t-time">12:10 出发 → 15:05 到达</div>
+</div>
 </div>
 		</div>
 		<img class="ticket-pic" src="images/flight-3u8924.jpg" alt="3U8924 厦门→成都 机票" onclick="this.style.transform=this.style.transform?'':'scale(1.8)';this.style.cursor='zoom-out'">
@@ -178,8 +190,11 @@ td{background:#fff}
 
 <div class="transit">
 <div class="t-icon">🚇</div>
-<div class="t-info"><div class="t-route">双流机场 → 春熙路</div><div class="t-detail">地铁10号线坐到太平园，换3号线到春熙路 | 约40分钟</div></div>
-<div class="t-time">15:30走<br>16:15到</div>
+<div class="t-body">
+<div class="t-route">双流机场 → 春熙路</div>
+<div class="t-detail">地铁10号线坐到太平园，换3号线到春熙路 | 约40分钟</div>
+<div class="t-time">15:30 出发 → 16:15 到达</div>
+</div>
 </div>
 
 <div class="tip">双流机场离市区近，地铁直达，不用打车。打车反而可能堵在路上。</div>
@@ -247,16 +262,22 @@ td{background:#fff}
 
 <div class="transit">
 <div class="t-icon">🚇</div>
-<div class="t-info"><div class="t-route">春熙路 → 成都南站</div><div class="t-detail">地铁2号线转1号线 | 半小时</div></div>
-<div class="t-time">13:00走<br>13:30到</div>
+<div class="t-body">
+<div class="t-route">春熙路 → 成都南站</div>
+<div class="t-detail">地铁2号线转1号线 | 半小时</div>
+<div class="t-time">13:00 出发 → 13:30 到达</div>
+</div>
 </div>
 
 <div class="ticket-row">
 		<div class="t-info-col">
 		<div class="transit">
 <div class="t-icon">🚄</div>
-<div class="t-info"><div class="t-route">成都南 → 雅安</div><div class="t-detail">C3358 动车 | 已购票 | 14:21→15:28 | 52块/人</div></div>
-<div class="t-time">约1小时</div>
+<div class="t-body">
+<div class="t-route">成都南 → 雅安</div>
+<div class="t-detail">C3358 动车 | 已购票 | 14:21→15:28 | 52块/人</div>
+<div class="t-time">14:21 出发 → 15:28 到达</div>
+</div>
 </div>
 		</div>
 		<img class="ticket-pic" src="images/train-chengdu-yaan.png" alt="C3358 成都南→雅安 车票" onclick="this.style.transform=this.style.transform?'':'scale(1.8)';this.style.cursor='zoom-out'">
@@ -266,8 +287,11 @@ td{background:#fff}
 
 <div class="transit">
 <div class="t-icon">🚕</div>
-<div class="t-info"><div class="t-route">雅安站 → 川农附近酒店</div><div class="t-detail">打车 | 15分钟 | 15块</div></div>
-<div class="t-time">15:30走<br>15:45到</div>
+<div class="t-body">
+<div class="t-route">雅安站 → 来住别院度假酒店（雅安廊桥店）</div>
+<div class="t-detail">打车 | 15分钟 | 15块</div>
+<div class="t-time">15:30 出发 → 15:45 到达</div>
+</div>
 </div>
 
 <div class="timeline">
@@ -314,10 +338,13 @@ td{background:#fff}
 	</div>
 
 	<div class="transit">
-	<div class="t-icon">🚕</div>
-	<div class="t-info"><div class="t-route">川农 → 雅安站</div><div class="t-detail">打车 | 15分钟 | 15块</div></div>
-	<div class="t-time">14:30走<br>14:45到</div>
-	</div>
+<div class="t-icon">🚕</div>
+<div class="t-body">
+<div class="t-route">川农 → 雅安站</div>
+<div class="t-detail">打车 | 15分钟 | 15块</div>
+<div class="t-time">14:30 出发 → 14:45 到达</div>
+</div>
+</div>
 
 	<div class="buffer">雅安站不大，提前半小时到足够。15:51的动车，15:20进站候车就行。候车厅买点水和零食带着。</div>
 
@@ -336,10 +363,13 @@ td{background:#fff}
 	</div>
 
 	<div class="transit">
-	<div class="t-icon">🚇</div>
-	<div class="t-info"><div class="t-route">重庆北站 → 解放碑酒店</div><div class="t-detail">地铁10号线转1号线 | 约40分钟<br>或打车半小时，35块左右</div></div>
-	<div class="t-time">18:20走<br>19:00到</div>
-	</div>
+<div class="t-icon">🚇</div>
+<div class="t-body">
+<div class="t-route">重庆北站 → 解放碑酒店</div>
+<div class="t-detail">地铁10号线转1号线 | 约40分钟<br>或打车半小时，35块左右</div>
+<div class="t-time">18:20 出发 → 19:00 到达</div>
+</div>
+</div>
 
 	<div class="note"><h4>⚠️ 重庆住宿提醒</h4>今晚（6/12）酒店<b>已预订</b>，解放碑附近，住<b>1晚</b>。明晚（6/13）的酒店<b>还没订</b>——因为14号早上7:10的飞机，建议订<b>江北机场附近</b>的酒店，14号早上多睡一小时。</div>
 
@@ -406,8 +436,11 @@ td{background:#fff}
 
 <div class="transit">
 <div class="t-icon">🚕</div>
-<div class="t-info"><div class="t-route">机场酒店 → 江北机场T2</div><div class="t-detail">打车或酒店班车 | 10-15分钟<br>住机场旁边，不用赶，十分钟就到</div></div>
-<div class="t-time">05:20走<br>05:35到</div>
+<div class="t-body">
+<div class="t-route">机场酒店 → 江北机场T2</div>
+<div class="t-detail">打车或酒店班车 | 10-15分钟<br>住机场旁边，不用赶，十分钟就到</div>
+<div class="t-time">05:20 出发 → 05:35 到达</div>
+</div>
 </div>
 
 <div class="buffer">5:30到机场，7:10的飞机，一个半小时值机托运安检。早上人少，不用排队，时间够。</div>
@@ -423,8 +456,11 @@ td{background:#fff}
 
 <div class="transit">
 <div class="t-icon">🚇</div>
-<div class="t-info"><div class="t-route">首都机场 → 王府井</div><div class="t-detail">机场快轨到东直门，换2号线到建国门，再换1号线到王府井 | 约55分钟 | 25块</div></div>
-<div class="t-time">10:00走<br>10:50到</div>
+<div class="t-body">
+<div class="t-route">首都机场 → 王府井</div>
+<div class="t-detail">机场快轨到东直门，换2号线到建国门，再换1号线到王府井 | 约55分钟 | 25块</div>
+<div class="t-time">10:00 出发 → 10:50 到达</div>
+</div>
 </div>
 
 <div class="timeline">
@@ -468,8 +504,11 @@ td{background:#fff}
 
 <div class="transit">
 <div class="t-icon">🚇</div>
-<div class="t-info"><div class="t-route">王府井 → 圆明园</div><div class="t-detail">地铁1号线到西单换4号线，圆明园站B口出 | 约50分钟</div></div>
-<div class="t-time">08:00走<br>08:40到</div>
+<div class="t-body">
+<div class="t-route">王府井 → 圆明园</div>
+<div class="t-detail">地铁1号线到西单换4号线，圆明园站B口出 | 约50分钟</div>
+<div class="t-time">08:00 出发 → 08:40 到达</div>
+</div>
 </div>
 
 <div class="timeline">
@@ -513,14 +552,20 @@ td{background:#fff}
 
 <div class="transit">
 <div class="t-icon">🚇</div>
-<div class="t-info"><div class="t-route">王府井 → 北京南站</div><div class="t-detail">地铁1号线到西单换4号线 | 约30分钟</div></div>
-<div class="t-time">09:00走<br>09:20到</div>
+<div class="t-body">
+<div class="t-route">王府井 → 北京南站</div>
+<div class="t-detail">地铁1号线到西单换4号线 | 约30分钟</div>
+<div class="t-time">09:00 出发 → 09:20 到达</div>
+</div>
 </div>
 
 <div class="transit">
 <div class="t-icon">🚄</div>
-<div class="t-info"><div class="t-route">北京南 → 龙岩</div><div class="t-detail">G323 高铁 | 11:00→20:30（约9.5小时）<br>觉得高铁太久的话也可以✈️北京飞厦门（3小时）+ 🚄厦门动车回龙岩（1.5小时），快但贵</div></div>
-<div class="t-time">11:00出发<br>20:30到家</div>
+<div class="t-body">
+<div class="t-route">北京南 → 龙岩</div>
+<div class="t-detail">G323 高铁 | 11:00→20:30（约9.5小时）<br>觉得高铁太久的话也可以✈️北京飞厦门（3小时）+ 🚄厦门动车回龙岩（1.5小时），快但贵</div>
+<div class="t-time">11:00 出发 → 20:30 到达</div>
+</div>
 </div>
 
 <div class="timeline">
