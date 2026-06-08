@@ -52,6 +52,9 @@ table{width:100%;border-collapse:collapse;margin:10px 0}
 th,td{padding:8px 10px;text-align:left;border:1px solid #dee2e6}
 th{background:#1a5276;color:#fff}
 td{background:#fff}
+.ticket-pic{width:100%;max-width:180px;border-radius:8px;margin:10px 0;display:block;box-shadow:0 2px 8px rgba(0,0,0,0.15);cursor:zoom-in}
+.ticket-row{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+.ticket-row .t-info-col{flex:1;min-width:280px}
 @media(max-width:768px){
   body{padding:10px}
   .day{padding:15px}
@@ -100,11 +103,16 @@ td{background:#fff}
 <div class="t-time">07:20出门<br>07:40到</div>
 </div>
 
-<div class="transit">
+<div class="ticket-row">
+		<div class="t-info-col">
+		<div class="transit">
 <div class="t-icon">🚄</div>
 <div class="t-info"><div class="t-route">龙岩站 → 厦门北站</div><div class="t-detail">D3297 动车 | 已购票 | 08:29→09:46</div></div>
 <div class="t-time">1小时17分</div>
 </div>
+		</div>
+		<img class="ticket-pic" src="images/ticket-d3297.png" alt="D3297 龙岩→厦门北 车票" onclick="this.style.transform=this.style.transform?'':'scale(1.8)';this.style.cursor='zoom-out'">
+	</div>
 
 <div class="buffer">到厦门北站跟着人流出站就行。不用急，下一段打车去机场也就半小时的事。</div>
 
@@ -116,11 +124,16 @@ td{background:#fff}
 
 <div class="buffer">10:20到机场，12:10的飞机，差不多<b>两个小时</b>用来值机托运安检，绰绰有余。过了安检在候机厅给小孩买点零食和水，飞机上吃。</div>
 
-<div class="transit">
+<div class="ticket-row">
+		<div class="t-info-col">
+		<div class="transit">
 <div class="t-icon">✈️</div>
 <div class="t-info"><div class="t-route">厦门高崎 → 成都双流</div><div class="t-detail">3U8924 川航 | 已购票 | 12:10→15:05</div></div>
 <div class="t-time">约3小时</div>
 </div>
+		</div>
+		<img class="ticket-pic" src="images/flight-3u8924.jpg" alt="3U8924 厦门→成都 机票" onclick="this.style.transform=this.style.transform?'':'scale(1.8)';this.style.cursor='zoom-out'">
+	</div>
 
 <div class="tip">川航飞机餐还行，不用在机场吃午饭。飞机上能吃饱。如果小孩挑食就带点面包。</div>
 
@@ -133,7 +146,14 @@ td{background:#fff}
 <div class="tip">双流机场离市区近，地铁直达，不用打车。打车反而可能堵在路上。</div>
 
 <div class="timeline">
-<div class="row"><div class="time">16:15</div><div class="event">🏨 到酒店，办入住。住春熙路/太古里附近，连住<b>两晚</b>。进门先躺十分钟，坐了一天了</div></div>
+<div class="ticket-row">
+		<div class="t-info-col">
+		<div class="timeline" style="margin:0;padding:0;background:none">
+		<div class="row"><div class="time">16:15</div><div class="event">🏨 入住：<b>朵兰达LAB酒店</b>（成都春熙路步行街店）<br>📍 锦江区春熙路北段26号4楼 · 14:30后入住 <b>×2间，连住2晚</b></div></div>
+		</div>
+		</div>
+		<img class="ticket-pic" src="images/hotel-chengdu.jpg" alt="成都朵兰达LAB酒店预订" onclick="this.style.transform=this.style.transform?'':'scale(1.8)';this.style.cursor='zoom-out'">
+	</div>
 <div class="row"><div class="time">17:30</div><div class="event">出门逛。酒店走路到太古里就几分钟，IFS那只爬墙熊猫去打个卡——成都地标，不拍等于没来</div></div>
 <div class="row"><div class="time">18:30</div><div class="event">🍽️ 晚饭。春熙路附近随便找，想正式点就去龙抄手总店（钟水饺、担担面、赖汤圆，人均40-50），想随便吃就路边找家串串或者面馆，成都随便进一家都不会太难吃</div></div>
 <div class="row"><div class="time">20:00</div><div class="event">散个步消消食，太古里夜景不错。方所书店可以逛一圈。别搞太晚，明天要早起看熊猫</div></div>
@@ -198,7 +218,14 @@ td{background:#fff}
 </div>
 
 <div class="timeline">
-<div class="row"><div class="time">16:00</div><div class="event">🏨 入住。雅安酒店便宜，200左右就能住不错。放好东西休息一下</div></div>
+<div class="ticket-row">
+		<div class="t-info-col">
+		<div class="timeline" style="margin:0;padding:0;background:none">
+		<div class="row"><div class="time">16:00</div><div class="event">🏨 入住：<b>来住别院度假酒店</b>（雅安廊桥店）<br>📍 雨城区青衣江路中段66号（近雅州廊桥）· 14:00后入住 <b>×2间，住1晚</b></div></div>
+		</div>
+		</div>
+		<img class="ticket-pic" src="images/hotel-yaan.jpg" alt="雅安来住别院度假酒店预订" onclick="this.style.transform=this.style.transform?'':'scale(1.8)';this.style.cursor='zoom-out'">
+	</div>
 <div class="row"><div class="time">17:00</div><div class="event">📞 联系妹妹。确认明天毕业典礼几点、在哪、要不要提前去踩点。约个见面地方</div></div>
 <div class="row"><div class="time">17:30</div><div class="event">🚶 出门走走。青衣江边散步，走到雅安廊桥。来回四十分钟，空气湿润舒服</div></div>
 <div class="row"><div class="time">18:30</div><div class="event">🍽️ 晚饭。雅安特色——砂锅雅鱼、挞挞面、汉源花椒鸡。搜一下"兰师傅挞挞面"，当地有名的，人均60</div></div>
